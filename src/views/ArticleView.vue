@@ -1,0 +1,46 @@
+<template>
+  <div class="article">
+    <SectionButton @fetch="fetchData"/>
+    <div class="gap">
+      <NewsArticle :articles="articles"/>
+    </div>
+  </div>
+</template>
+
+<script>
+import NewsArticle from '@/components/NewsArticle';
+import SectionButton from '@/components/SectionButton';
+import axios from 'axios';
+
+export default {
+  name: 'ArticleView',
+  data(){
+    return {
+      articles: [],
+    };
+  },
+  components: {
+    NewsArticle,SectionButton
+  },
+  methods: {
+    async fetchData(category) {
+      const m = 'articles';
+      const response = await axios.get(`http://localhost:4000/news`,  {params: { m, s: category }});
+      console.log(response.data.data);
+      this.articles = response.data.data;
+    }
+  },
+}
+</script>
+
+<style lang="scss">
+  .article{
+    align-items: left;
+    padding-top: 5px;
+    >.gap{
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+  }
+</style>
