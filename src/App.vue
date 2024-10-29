@@ -1,11 +1,7 @@
 <template>
-  <div>
+  <div class="main">
     <div class="head">
       <router-link to="/">News.</router-link>
-      <!-- <input
-        type="text" v-model="searchQuery"
-        @input="onSearch"
-        placeholder="검색어를 입력하세요..."/> -->
       <div class="headbutton">
         <nav>
           <router-link to="/article">국내</router-link>
@@ -21,6 +17,9 @@
       </form>
     </div>
     <router-view/>
+    <div class="footer">
+      <p>Copyrightⓒ News. 2024 All Rights Reserved</p>
+    </div>
   </div>
 </template>
 
@@ -63,24 +62,27 @@ export default {
   text-align: center;
   color: #2c3e50;
   max-width: 480px;
-  // height: 100vh;
+  height: 100vh;
   margin: 0 auto;
-  // box-sizing: border-box;
-  padding: 20px 10px;
 }
 
 a{
   text-decoration: none;
 }
 
-div {
+.main {
+  box-sizing: border-box;
   .head{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    background-color: white;
+
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
     >a {
-      font-size: 24px;
+      font-size: 32px;
       font-weight: bold;
       color: #42b983;
       &.router-link-exact-active {
@@ -114,21 +116,27 @@ div {
   .searchBox{
     height: 55px;
     // background-color: white;
-    background-color: #EBEBEB;
+    // background-color: #EBEBEB;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 99;
+
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
     form{
       display: flex;
-      width: 80%;
+      width: 100%;
       height: 42px;
       // background-color: #EBEBEB;
       background-color: white;
-      border-radius: 20px;
+      // border-radius: 20px;
       align-items: center;
       box-sizing: border-box;
       padding: 0 16px;
+      border-bottom: 1px solid black;
+      
       button{
         width: 26px;
         height: 26px; 
@@ -145,6 +153,24 @@ div {
         font-size: 18px;
         background-color: transparent;
       }
+    }
+  }
+  .footer{
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    height: 90px;
+    background-color: #EBEBEB;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items:last baseline;
+
+    bottom: 0; /* 화면의 아래쪽에 위치 */
+  left: 0;
+    p{
+
     }
   }
   

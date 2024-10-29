@@ -38,6 +38,10 @@ export default {
 
 <style lang="scss">
   .global{
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    
     align-items: left;
     padding-top: 5px;
     >.gap{

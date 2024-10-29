@@ -51,6 +51,9 @@ export default {
 </script>
 <style lang="scss">
   .search{
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
     >div{
       display: flex;
       justify-content: space-between;

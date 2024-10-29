@@ -1,5 +1,5 @@
 <template lang="">
-  <div>
+  <div class="home">
     <h2>뉴스</h2>
     <MainArticle/>
   </div>
@@ -17,6 +17,10 @@ export default {
   }
 }
 </script>
-<style lang="">
-  
+<style lang="scss">
+  .home{
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
 </style>
