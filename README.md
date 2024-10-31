@@ -7,17 +7,17 @@
 ## 
 
 ### `개발 환경`
-
+Vue.js, MongoDB
 
 ### `제작 기간`
+2024.10.25 - 2024.10.29
+
+### `예시`
 ```
-npm run build
+이미지를 넣자!
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+##
 
-### Customize configuration
+### 트러블슈팅
 See [Configuration Reference](https://cli.vuejs.org/config/).
