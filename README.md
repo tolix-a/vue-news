@@ -7,10 +7,14 @@
 ## 
 
 ### `개발 환경`
-Vue.js, MongoDB
+Vue.js, SCSS, MongoDB, Figma, Git, Github
 
 ### `제작 기간`
 2024.10.25 - 2024.10.29
+
+### `기능`
+- 장르별 탭
+- 기사 제목 검색
 
 ### `예시`
 ```
@@ -20,4 +24,5 @@ Vue.js, MongoDB
 ##
 
 ### 트러블슈팅
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- 검색 결과가 제대로 나오지 않음
+- 
