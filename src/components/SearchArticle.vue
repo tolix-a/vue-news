@@ -1,12 +1,10 @@
 <template lang="">
-  <!-- <div class="serComponent" v-for="(item,index) in articles" :key="index"> -->
-    <figure class="resultb" v-for="(item,index) in srData" :key="index">
-      <img :src="item.image_url"/>
-      <div>
-        <p>{{item.title}}</p>
-      </div>
-    </figure>
-  <!-- </div> -->
+  <figure class="resultb" v-for="(item,index) in srData" :key="index">
+    <img :src="item.thumbnail_url"/>
+    <div>
+      <p>{{item.title}}</p>
+    </div>
+  </figure>
 </template>
 <script>
 export default {
@@ -36,6 +34,7 @@ export default {
     }
     img{
       width: 110px;
+      height: 83px;
       margin-right: 15px;
     }
     div{

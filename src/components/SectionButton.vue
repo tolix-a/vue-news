@@ -54,17 +54,19 @@ export default {
   .sectionButton{
     width: 100%;
     display: flex;
-    // overflow-x:scroll;
-    justify-content: center;
+    overflow-x:auto;
+    white-space: nowrap;
+    justify-content: space-between;
+    // justify-content: center;
     gap: 5px;
     margin-bottom: 20px;
-    margin-top: 5px;
+    // margin-top: 5px;
 
     button{
       border: none;
       border-radius: 10%;
       cursor: pointer;
-      padding: 5px 10px;
+      padding: 6px 13px;
       &.active{
         background-color: #42b983; // 활성화된 버튼의 색상
         color: white; // 텍스트 색상

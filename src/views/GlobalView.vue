@@ -23,14 +23,11 @@ export default {
     NewsArticle,SectionButton
   },
   methods: {
-    async fetchData(m, s) {
-      this.activeCategory = s; // 활성 카테고리 업데이트
-      try {
-        const response = await axios.get(`https://api-v2.deepsearch.com/v1/${m}/${s}?&date_from=2024-09-25&date_to=2024-10-24&api_key=43e5844102154529a82e5bd27b43d2ca`);
-        this.articles = response.data; // 기사 데이터를 articles 배열에 저장
-      } catch (error) {
-        console.error('API 요청 중 오류 발생:', error);
-      }
+    async fetchData(category) {
+      const m = 'global-articles';
+      const response = await axios.get(`express-server-sand.vercel.app/global`,  {params: { m, s: category }});
+      console.log(response.data.data);
+      this.articles = response.data.data;
     }
   }
 }

@@ -25,7 +25,7 @@ export default {
   methods: {
     async fetchData(category) {
       const m = 'articles';
-      const response = await axios.get(`http://localhost:4000/news`,  {params: { m, s: category }});
+      const response = await axios.get(`express-server-sand.vercel.app/articles`,  {params: { m, s: category }});
       console.log(response.data.data);
       this.articles = response.data.data;
     }
@@ -44,7 +44,7 @@ export default {
     >.gap{
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      gap: 20px;
     }
   }
 </style>

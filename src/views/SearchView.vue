@@ -1,5 +1,8 @@
 <template lang="">
   <div class="search">
+    <div class='backbtn'>
+      <button @click="goBack"><img src='../../public/arrow-back.svg'/></button>
+    </div>
     <div>
       <p>검색 결과 " <span>{{query.query}}</span> "</p>
       <p class="num"><span>{{sResults.total_items}}</span>개</p>
@@ -45,6 +48,9 @@ export default {
       this.sResults = response.data;
       this.srData = response.data.data;
       console.log(response.data);
+    },
+    goBack() {
+      window.history.back(); // 뒤로가기
     }
   }
 }
@@ -54,6 +60,19 @@ export default {
     width: 100%;
     padding: 0 20px;
     box-sizing: border-box;
+    .backbtn{
+      display: flex;
+      align-items: center;
+      // justify-content: center;
+      height: 50px;
+      button{
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        padding-left: 0;
+        padding-right: 50px;
+      }
+    }
     >div{
       display: flex;
       justify-content: space-between;

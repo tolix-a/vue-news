@@ -18,6 +18,8 @@
     </div>
     <router-view/>
     <div class="footer">
+      <!-- <h1>News.</h1> -->
+      <div>이용약관<span>news11@gmail.com</span></div>
       <p>Copyrightⓒ News. 2024 All Rights Reserved</p>
     </div>
   </div>
@@ -34,6 +36,7 @@ export default {
   methods: {
     toggleSearch(){
       this.isVisible = !this.isVisible;
+      console.log(this.isVisible);
     },
     onSearch(){
       if (this.searchQuery){
@@ -55,6 +58,26 @@ export default {
 </script>
 
 <style lang="scss">
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -72,6 +95,7 @@ a{
 
 .main {
   box-sizing: border-box;
+  position: relative;
   .head{
     display: flex;
     justify-content: space-between;
@@ -114,17 +138,21 @@ a{
     }
   }
   .searchBox{
-    height: 55px;
+    // height: 55px;
     // background-color: white;
     // background-color: #EBEBEB;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 57px;
+    left: 0;
     z-index: 99;
 
     width: 100%;
     padding: 0 20px;
     box-sizing: border-box;
+    margin-bottom: 6.5px;
     form{
       display: flex;
       width: 100%;
@@ -135,7 +163,7 @@ a{
       align-items: center;
       box-sizing: border-box;
       padding: 0 16px;
-      border-bottom: 1px solid black;
+      border-bottom: 1px solid rgb(119, 119, 119);
       
       button{
         width: 26px;
@@ -160,17 +188,35 @@ a{
     padding: 0 20px;
     box-sizing: border-box;
 
-    height: 90px;
+    height: 70px;
     background-color: #EBEBEB;
     margin-top: 30px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items:last baseline;
 
-    bottom: 0; /* 화면의 아래쪽에 위치 */
-  left: 0;
+    bottom: 0;
+    left: 0;
+    >div{
+      display: flex;
+      justify-content: center;
+      // justify-content: space-between;
+      // width: 258px;
+      // width: 60%;
+      align-items: center;
+      padding-bottom: 3px;
+      // color: #383838;
+      // text-decoration: underline 1px solid black;
+      span{
+        font-size: 14px;
+        padding-left: 10px;
+        text-decoration: none;
+      }
+    }
     p{
-
+      font-size: 13px;
+      color: #868686;
     }
   }
   
