@@ -1,5 +1,5 @@
 # News.
-딥서치 api를 이용한 뉴스 앱입니다.
+딥서치 뉴스 API를 이용한 뉴스 앱입니다.
 무료 버전을 이용해 매월 요청 300번까지만 가능합니다.
 
 링크 [📗](https://vue-news-sepia.vercel.app/)
@@ -22,13 +22,18 @@
 
 ### `기능`
 * 검색
-- 
+- 정치 경제 등 섹션별 분류
 
-### `npm run eject`
+### `과정`
+1. 구조
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- 어느 페이지에서든 검색 가능하고 화면 크기가 줄어들어도 검색창 크기가 너무 작아지지 않게끔 만들기 위해 검색버튼을 헤더에 놓고 토글형식으로 만들었습니다. <br/>
+- 검색 후 이전 화면으로 돌아갈 수 있도록 검색 결과 화면에 뒤로가기 버튼을 추가했습니다.
+- 섹션별 기사, 검색 결과 기사 수가 많아서 무한 스크롤 기능을 넣고자 했으나 사용하는 API의 요청 한도가 월 300회라는 점을 감안하여 기사를 더 불러오는 기능은 넣지 않았습니다.
+- 기사 제목을 클릭하면 기사 내용이 나오도록 제작하고 싶었으나 API에서는 기사 전문이 아닌 summary와 원본 기사 링크가 제공되어 기사를 누르면 해당 기사로 넘어가게 만들었습니다.
+- 무료 버전에서는 토픽별 기사를 요청할 수 없었기 때문에 메인 페이지에는 뉴스의 가장 기본적인 섹션이라 생각되는 정치, 경제, 사회, 문화의 기사 몇개씩만 가져왔습니다.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. 
 
 ##
 
@@ -37,5 +42,5 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting
 
 
-### `npm run build` fails to minify
+------------
 여기다 이미지를 넣을까
