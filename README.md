@@ -1,5 +1,6 @@
 # News.
 딥서치 api를 이용한 뉴스 앱입니다.
+무료 버전을 이용해 매월 요청 300번까지만 가능합니다.
 
 링크 [📗](https://vue-news-sepia.vercel.app/)
 
@@ -18,10 +19,9 @@
 ### `제작 기간`
 2024.10.25 - 약 5일
 
-### `예시`
-이미지를 넣자!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `기능`
+* 검색
+- 
 
 ### `npm run eject`
 
