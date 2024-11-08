@@ -16,6 +16,7 @@
 <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
 <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white">
 <img src="https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white">
+모달?
 
 ### `제작 기간`
 2024.10.25 - 약 5일
@@ -37,11 +38,16 @@
 - 익스프레스 서버와 axios를 이용해 데이터를 받고 우선 개발
 - 쿼리를 보내서 탭 별로 다른 데이터가 나오도록 구성
 - 검색 창을 열어놓고 다른 페이지로 가면 검색 창이 닫히고 초기화하게 만듦
-- 요청 횟수 제한 때문에 기사 누르면 새창에서 열리게 함. 
+- 요청 횟수 제한 때문에 기사 누르면 새창에서 열리게 함.
+- vercel 배포 후 axios url 변경
 
 ##
 
 ### 트러블슈팅
+- 메인페이지에 요청한 데이터가 들어오지 않음
+  - ㅇㅇ
+- 섹션 버튼 눌러도 데이터가 들어오지 않음
+  - $emit에 매개변수를 2개 넣고 받는 함수의 매개변수를 1개로 써놨었음
 - env를 쓰고부터 요청한 api 데이터가 넘어오지 않는 문제
   - dotenv가 필요하다는 것을 배움
 
